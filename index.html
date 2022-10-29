@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Веб студио</title>
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Веб студио</span>
+    </div>
+    <div id="abaut">
+      <a href="#" title="Главная" onclick="slowScroll('#main')">Главная</a>
+       <a href="#" onclick="slowScroll('#overiew')" title="Раработка игр">Разработка игр</a>
+       <a href="#" onclick="slowScroll('contacts')" title="Контакты">Контакты</a>
+       <a href="#" onclick="slowScroll('#faq')" title="Ответы на вапросы">FOQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Программирование</h1>
+    <h3>как способ жизни</h3>
+  </div>
+
+
+  <div id="main">
+    <div id="intro">
+      <h2>Наши услугий помогут вам</h2>
+      <span>Большой выбор, что вам может пригодиться</span>
+    </div>
+    <div id="text">
+      <span>loerm input game hone 500 two jhdfkjfdskjsajld likkjsddmsl</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Примушества</h2>
+    <h4>Наши проекты</h4>
+
+    <div class="img">
+      <img src="img/kg.png"  alt="">
+      <span>Ютуб</span>
+      </div>
+
+
+      <div class="img">
+        <img  src="img/2.png"  alt="">
+        <span>Perizat Asanalieva</span>
+        </div>
+
+        
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Ведите имя" name="name" id="name"><br>
+      <label for="email">Введите вашу почту <span>*</span></label><br>
+      <input type="email" placeholder="Ведите емайл" name="email" id="email">
+      <label for="name">Собшения <span>*</span></label><br>
+      <textarea placeholder="Ведите ваше Собшения" name="message" id="message"></textarea></br>
+      <div id="mess_send" class="bth">Отправить</div>
+    </form>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id){
+       $('html,body').animate({
+
+        ScrollTOP: $(id).offset().top
+
+       },500);
+    }
+
+    $(Document).on('scroll', function(){
+      if($(window).scrollTop() === 0)
+         $('header').removeClass('fixed');
+         else
+         $('header').attr('class','fixed');
+    });
+  </script>
+</body>
+</html>
